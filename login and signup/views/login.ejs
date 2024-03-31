@@ -1,0 +1,176 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>LEO AI Login Page</title>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="http://localhost:3000/images/logoleo.png">
+  </head>
+  <body>
+
+    <div class="d-flex justify-content-center">
+      <div class="brand_logo_container1">
+        <img src="http://localhost:3000/images/Untitled design (3).png"
+          class="brand_logo" id="img" alt="Logo">
+      </div>
+      <div
+        style="justify-content: center; align-items: center; justify-items: center; align-content: center;"><img
+          src="http://localhost:3000/images/logoleo.png" alt height="150px"
+          width="150px" style="position: relative; left: 600px;"></div>
+    </div>
+
+    <div class="container mainc">
+      <div class="card"></div>
+      <div class="card">
+        <form action="/login" method="POST">
+          <div class="input-container">
+            <input type="#{type}" id="#{label}" class="email"
+              required="required" typer="email" name="email" id="email" />
+            <label for="#{label}">Email</label>
+            <div class="bar"></div>
+          </div>
+          <div class="input-container">
+            <input type="#{type}" id="#{label}" class="password" name="password"
+              required="required" />
+            <label for="#{label}">Password</label>
+            <div class="bar"></div>
+          </div>
+          <div class="custom-control custom-checkbox add">
+            <input type="checkbox" class="custom-control-input"
+              id="customControlInline">
+            <label class="custom-control-label" for="customControlInline">Show
+              Password</label>
+          </div>
+          <div class="button-container">
+            <button type="submit"><span>Sign In</span></button>
+          </div>
+
+          <div id="text"
+            style="display: flex; justify-content: center; align-items: center; position: relative; top: 20px;;"><p
+              style="color: red; font-size: 20px;"> <%= message %> </p></div>
+        </form>
+      </div>
+      <div class="card alt">
+        <div class="toggle" onclick="regis()"></div>
+        <h1 class="title">Register
+          <div class="close"></div>
+        </h1>
+        <form action="/register" method="POST">
+          <div class="input-container">
+            <input type="#{type}" name="username" id="#{label}" required />
+            <label for="#{label}">Your Name</label>
+            <div class="bar"></div>
+          </div>
+          <div class="input-container">
+            <input type="#{type}" name="email" id="#{label}" class="email1"
+              required="required" />
+            <label for="#{label}">Email</label>
+            <div class="bar"></div>
+          </div>
+          <div class="input-container">
+            <input type="#{type}" id="#{label}" class="password1"
+              name="password" required />
+            <label for="#{label}">Password</label>
+            <div class="bar"></div>
+          </div>
+          <div class="input-container custom-control custom-checkbox add ass">
+            <input type="checkbox" class="custom-control-input"
+              id="customControlInline1">
+            <label class="custom-control-label" for="customControlInline1">Show
+              Password</label>
+          </div>
+          <div class="button-container butsub">
+            <button type="submit"><span>Register</span></button>
+          </div>
+        </form>
+      </div>
+      <div
+        style="justify-content: center; align-items: center; justify-items: center; align-content: center;"><img
+          src="http://localhost:3000/images/leoai logo.png" alt height="400px"
+          width="500px" style="padding-bottom: 180px;"></div>
+    </div>
+
+    
+    <script
+      src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+    </script>
+    
+    <script>
+
+        const registerCheckbox = document.getElementById('customControlInline1');
+
+        $('.toggle').on('click', function() {
+          $('.container').stop().addClass('active');
+        });
+      
+        $('.close').on('click', function() {
+          $('.container').stop().removeClass('active');
+        });
+
+      
+      
+        const img = document.getElementById('img');
+        const email = document.querySelector('.email');
+        const pass = document.querySelector('.password');
+        const spass = document.getElementById('customControlInline');
+        pass.type = 'password';
+        window.addEventListener("load", () => {
+            img.src = "http://localhost:3000/images/Untitled design (3).png";
+        });
+        email.addEventListener("click", () => {
+            img.src = "http://localhost:3000/images/Untitled design (4).png";
+        });
+        pass.addEventListener("click", ()=>{
+            img.src = "http://localhost:3000/images/Untitled design (2).png"
+        });
+        spass.addEventListener('change', function(){
+            if(this.checked){
+                pass.type = 'text';
+                img.src = "http://localhost:3000/images/Untitled design.png"
+            }
+            else{
+                pass.type = 'password';
+                img.src = "http://localhost:3000/images/Untitled design (2).png";
+            }
+        });
+        
+
+        const email1 = document.querySelector('.email1');
+        const pass1 = document.querySelector('.password1');
+        const spass1 = document.getElementById('customControlInline1');
+        pass1.type = 'password';
+        window.addEventListener("load", () => {
+            img.src = "http://localhost:3000/images/Untitled design (3).png";
+        });
+        email1.addEventListener("click", () => {
+            img.src = "http://localhost:3000/images/Untitled design (4).png";
+        });
+        pass1.addEventListener("click", ()=>{
+            img.src = "http://localhost:3000/images/Untitled design (2).png"
+        });
+        spass1.addEventListener('change', function(){
+            if(this.checked){
+                pass1.type = 'text';
+                img.src = "http://localhost:3000/images/Untitled design.png"
+            }
+            else{
+                pass1.type = 'password';
+                img.src = "http://localhost:3000/images/Untitled design (2).png";
+            }
+        });
+        function regis(){
+            img.src = "http://localhost:3000/images/Untitled design (3).png";
+        }
+        
+      </script>
+
+  </body>
+</html>
