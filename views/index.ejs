@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEO AI</title>
+    <link rel="icon" href="http://localhost:5000/images/logoleo.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/style.css">
+    <style>
+    
+    body{
+    background-image: url("http://localhost:5000/images/8823451.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: Perpetua;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+p{
+    color: white;
+    
+}
+.para1{
+    position: relative;
+    top: 32px;
+    right: 30px;
+}
+.para2{
+    position: relative;
+    top: 28px;
+    right: 40px;
+}
+#start{
+    position: relative;
+    left: 170px;
+}
+.content{
+    height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+.content::-webkit-scrollbar{
+    width: 0.5em;
+}
+.content:hover::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    right: 5px;
+    background-color: red;
+}
+.main{
+    position: relative;
+    bottom: 230px;
+}
+
+.button-49,
+.button-49:after {
+  width: 100px;
+  height: 76px;
+  
+  font-size: 18px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, red 5%);
+  border: 0;
+  color: yellow;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px yellow;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'LEO AI';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, yellow 7%, yellow 7%, red 7%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px yellow;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width:150px;
+    height: 50px;
+    padding-bottom: 10px;
+  }
+}
+
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,red, rgb(241, 72, 11) 50%, rgb(208, 105, 15));
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(187, 84, 11, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: yellow;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  width: 100px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(61, 60, 60);
+  padding: 10px 19px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 18px;
+    min-width: 150px;
+  }
+}
+
+.logo{
+    position: relative;
+    top: 100px;
+    left: 300px;
+    padding-bottom: 20px;
+}
+.logo1{
+    position: relative;
+    top: 0;
+    left: 43%;
+}
+.img1{
+    position: relative;
+    right: 150px;
+}
+#imagetag{
+    border-radius: 40px;
+}
+
+.imaget{
+    position: relative;
+    bottom: 30px;
+    height: 465px;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.imaget::before,
+.imaget::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 40px;
+    background: linear-gradient(
+        -45deg,
+        red,
+        gold,
+        red,
+        gold,
+        red,
+        gold,
+        red,
+        gold
+    );
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: -1;
+    animation: change 40px linear infinite;
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+    
+}
+
+.imaget::after{
+    filter: blur(40px);
+    opacity: .5;
+}
+
+.start{
+    position: relative;
+    right: 18px;
+}
+.endt{
+  position: relative;
+  left: 1300px;
+  
+  bottom: 150px;
+}
+  </style>
+  </head>
+
+  <body>
+    <img src="http://localhost:5000/images/logoleo.png" alt width="200px"
+      height="200px" class="logo1">
+    <form action="/login" method="POST">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start endt">
+        <button class="button-64" role="button" id="end"><span
+            class="text">Logout</span></button>
+
+        <h2 style="visibility: hidden;" id="username"><%= Username %></h2>
+      </div>
+    </form>
+
+    <div class="container col-xxl-8 px-4 py-5 main">
+      <img src="http://localhost:5000/images/logo2.png" alt width="400px"
+        height="100px" class="logo">
+
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-lg-6" onclick="gifagchange()">
+          <div class="lead mb-4 position-relative bottom-50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              fill="red" class="bi bi-0-circle-fill para1" viewBox="0 0 16 16">
+              <path
+                d="M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895" />
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8.012 4.158c1.858 0 2.96-1.582 2.96-3.99V7.84c0-2.426-1.079-3.996-2.936-3.996-1.864 0-2.965 1.588-2.965 3.996v.328c0 2.42 1.09 3.99 2.941 3.99" />
+            </svg>
+            <p class="lead" id="question" style="font-size: 25px;">Ask any
+              queries</p>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+            fill="gold" class="bi bi-reply-all-fill para2" viewBox="0 0 16 16">
+            <path
+              d="M8.021 11.9 3.453 8.62a.72.72 0 0 1 0-1.238L8.021 4.1a.716.716 0 0 1 1.079.619V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" />
+            <path
+              d="M5.232 4.293a.5.5 0 0 1-.106.7L1.114 7.945l-.042.028a.147.147 0 0 0 0 .252l.042.028 4.012 2.954a.5.5 0 1 1-.593.805L.539 9.073a1.147 1.147 0 0 1 0-1.946l3.994-2.94a.5.5 0 0 1 .699.106" />
+          </svg>
+          <div class="lead content">
+            <p class="lead" id="answer1">He can give reply</p>
+          </div>
+
+        </div>
+        <div class="col-10 col-sm-8 col-lg-6 img1">
+          <div class="imaget">
+            <img
+              src="http://localhost:5000/images/Untitled video - Made with Clipchamp (12).gif"
+              class="d-block mx-lg-auto img-fluid" id="imagetag"
+              alt="Bootstrap Themes" onclick="gifchange()" ondblclick="gifcry()"
+              width="500" height="500" loading="lazy">
+
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start start">
+            <button class="button-49" role="button" id="start"
+              style="position: relative; left: 170px;">ASK LEO</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      
+        const start = document.getElementById('start');
+        const question = document.getElementById('question');
+
+
+        const recognition = new webkitSpeechRecognition();
+
+
+        const image = document.getElementById('imagetag');
+
+        const userna = '<%= Username %>';
+
+
+        function gifcry(){
+          image.src = "http://localhost:5000/images/Untitled video - Made with Clipchamp (16).gif";
+        }
+
+
+
+        function gifchange(){
+          image.src = "http://localhost:5000/images/Untitled video - Made with Clipchamp (15).gif";
+        }
+
+
+
+        function gifagchange(){
+          image.src = "http://localhost:5000/images/Untitled video - Made with Clipchamp (12).gif";
+        }
+
+
+
+        window.addEventListener('beforeunload', () => {
+          if (speaking) {
+              speechSynthesis.cancel();
+          }
+        });
+
+
+
+        const inactivityTimeout = 100000;
+
+        let inactivityTimer;
+
+        let act = false;
+
+        let speaking = false;
+
+        let functionExecuting = false;
+
+
+
+        function changeimg(){
+          act = false;
+          if(!act && !speaking){
+            image.src = "http://localhost:5000/images/Untitled video - Made with Clipchamp (17).gif";
+          }
+        }
+
+
+
+        function resetTimer(){
+          clearTimeout(inactivityTimer);
+          image.src = "http://localhost:5000/images/Untitled video - Made with Clipchamp (12).gif";
+          
+          if(!functionExecuting){
+            inactivityTimer = setTimeout(changeimg, inactivityTimeout);
+
+          }  
+        }
+
+
+        document.addEventListener("keypress", () => {
+          if (!functionExecuting) {
+            resetTimer();
+          }
+        });
+
+        resetTimer();
+
+
+
+        start.addEventListener('click', ()=>  { 
+          functionExecuting = true;
+          act = true; 
+          recognition.start();
+          if (speaking) {
+              speechSynthesis.cancel();
+          }
+
+          question.innerHTML = "Ask any queries";
+
+          answer1.innerHTML = "He can give reply";
+
+          image.src = "http://localhost:5000/images/Untitled video - Made with Clipchamp (12).gif";
+
+        });  
+
+
+            const thingsSaid = [];
+            recognition.addEventListener("result",  async(event) =>{
+                speaking = true;
+                const text = event.results[0][0].transcript;
+                thingsSaid.push(text);
+                question.innerHTML = text;
+                functionExecuting = true;
+                console.log(text);
+            if(text.includes('open') && text.includes('instagram') || text.includes('Instagram') && text.includes('open')){
+              functionExecuting = true;
+                act = true;
+                window.open("https://instagram.com", "_blank");
+                const fin = "Opening instagram";
+                answer1.innerHTML = fin;
+                act = true;
+                functionExecuting = false;
+                await speak(fin);
+                console.log("ENDED");
+                
+            }
+            else if(text.includes('open') && text.includes('whatsapp') || text.includes('WhatsApp') && text.includes('open')){
+              act = true;  
+              functionExecuting = true;
+              window.open("https://web.whatsapp.com", "_blank");
+                const fin = "Opening whatsapp";
+                answer1.innerHTML = fin;
+                functionExecuting = false;
+                await speak(fin);
+                console.log("ENDED");
+                functionExecuting = false;
+            } 
+            else if(text.includes('open') && text.includes('linkedin') || text.includes('LinkedIn') && text.includes('open')){
+              act = true;
+              functionExecuting = true;
+                window.open("https://www.linkedin.com/in/kedarinadh-sai-harsha-gadu-7b39b8256/", "_blank");
+                const fin = "Opening linkedin";
+                answer1.innerHTML = fin;
+                functionExecuting = false;
+                await speak(fin);
+                console.log("ENDED");
+                functionExecuting = false;
+            } 
+            else if(text.includes('open') && text.includes('github') || text.includes('GitHub') && text.includes('open')){
+              act = true;  
+              functionExecuting = true;
+              window.open("https://github.com/SaiHarsha9992", "_blank");
+                const fin = "Opening github";
+                answer1.innerHTML = fin;
+                functionExecuting = false;
+                await speak(fin);
+                console.log("ENDED");
+                functionExecuting = false;
+            } 
+            else if(text.includes('open') && text.includes('Calculator') || text.includes('calculator') && text.includes('open')){
+              act = true;  
+              functionExecuting = true;
+              window.open("Calculator:///");
+                const fin = "Opening Calculator";
+                answer1.innerHTML = fin;
+                functionExecuting = false;
+                await speak(fin);
+                console.log("ENDED");
+                functionExecuting = false;
+            } 
+            else if(text.includes('What is the time')||text.includes('what is the time') || text.includes("what's the time now") || text.includes('Could you tell me what time it is')|| text.includes("What's the current time")){
+              act = true;  
+              functionExecuting = true;
+              const time = new Date().toLocaleString(undefined, {hour: "numeric", minute: "numeric"})
+                const fin = time;
+                answer1.innerHTML = fin;
+                functionExecuting = false;
+                await speak(fin);
+                
+                console.log("ENDED");
+                functionExecuting = false;
+            }
+            else if(text.includes('What is the date') || text.includes('what is the date') || text.includes('Could you tell me what date it is')|| text.includes("What's the current date")){
+              act = true;
+              functionExecuting = true;
+                const date = new Date().toLocaleString(undefined, {month: "short", day: "numeric"})
+                const fin = date;
+                answer1.innerHTML = fin;
+                functionExecuting = false;
+                await speak(fin);
+                console.log("ENDED");
+                functionExecuting = false;
+            }
+            else if(text.includes('bye') || text.includes('Good bye') || text.includes("bhai")){
+              act = true;
+              functionExecuting = true;
+              const fin = "Bye"+userna+", thank you";
+              answer1.innerHTML = fin;
+              functionExecuting = false;
+              await speak(fin);
+              recognition.stop();
+              functionExecuting = false;
+            }
+            else {
+                act = true;
+                functionExecuting = true;
+                const response = await askOpenAi();
+                const answer = response.choices[0].message.content; 
+                answer1.innerHTML = answer;
+                thingsSaid.push(answer);
+                act = true;
+                functionExecuting = false;
+                await speak(answer);
+
+            
+                functionExecuting = false;
+            }
+            functionExecuting = true;
+
+
+            
+        });
+
+        
+
+        const speak = (event) => 
+            new Promise((resolve) => {
+              functionExecuting = true;
+              act = true;
+              
+                const utterence = new SpeechSynthesisUtterance(event); 
+                const voice = speechSynthesis.getVoices();
+                utterence.lang = 'en-IN';
+                utterence.voice = voice[1];
+                image.src = 'http://localhost:5000/images/Untitled video - Made with Clipchamp (13).gif';
+                speechSynthesis.speak(utterence);
+                act = true;
+                functionExecuting = true;
+                utterence.onend = () => {
+                resolve(null);
+                image.src = 'http://localhost:5000/images/Untitled video - Made with Clipchamp (12).gif';
+                speaking = false;
+                functionExecuting = false;
+              };
+              functionExecuting = false;
+        });
+
+
+
+        const askOpenAi = async () =>{
+          act = true;
+          functionExecuting = true;
+          image.src = 'http://localhost:5000/images/Untitled video - Made with Clipchamp (11) (1).gif';
+          act = true;
+        return fetch('https://api.openai.com/v1/chat/completions', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": 
+                    "Bearer ",
+            },
+            body: JSON.stringify({
+                "model": "gpt-3.5-turbo-0301",
+                "messages": [
+                    {
+                        "role" : "system", 
+                        "content" : "You are LEO ai assistant.Your user is "+ userna +"his name is "+ userna +"Keep your responses as terse and concise as possible."
+                    },
+                    {
+                        "role" : "user",
+                        "content": thingsSaid[thingsSaid.length -1]
+                    }
+                
+                ],
+            }),
+        })
+        .then(r=>r.json());
+        functionExecuting = false;
+        act = false;
+
+        
+    };
+</script>
+  </body>
+</html>

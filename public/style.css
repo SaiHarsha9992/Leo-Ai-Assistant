@@ -1,0 +1,118 @@
+body{
+    background-image: url("http://localhost:5000/images/8823451.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: Perpetua;
+    overflow-y: hidden;
+}
+p{
+    color: white;
+    
+}
+.para1{
+    position: relative;
+    top: 32px;
+    right: 30px;
+}
+.para2{
+    position: relative;
+    top: 28px;
+    right: 40px;
+}
+#start{
+    position: relative;
+    left: 170px;
+}
+.content{
+    height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+.content::-webkit-scrollbar{
+    width: 0.5em;
+}
+.content:hover::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    right: 5px;
+    background-color: red;
+}
+.main{
+    position: relative;
+    bottom: 180px;
+}
+.logo{
+    position: relative;
+    top: 100px;
+    left: 370px;
+}
+.logo1{
+    position: relative;
+    top: 0;
+    left: 43%;
+}
+.img1{
+    position: relative;
+    right: 150px;
+}
+#imagetag{
+    border-radius: 40px;
+}
+
+.imaget{
+    position: relative;
+    bottom: 30px;
+    height: 465px;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.imaget::before,
+.imaget::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 40px;
+    background: linear-gradient(
+        -45deg,
+        red,
+        gold,
+        red,
+        gold,
+        red,
+        gold,
+        red,
+        gold
+    );
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: -1;
+    animation: change 40px linear infinite;
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+    
+}
+
+.imaget::after{
+    filter: blur(40px);
+    opacity: .5;
+}
+
+.start{
+    position: relative;
+    right: 18px;
+}
