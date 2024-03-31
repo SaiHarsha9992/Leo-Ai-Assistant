@@ -1,1 +1,1 @@
-# LEO-AI-ASSISTANT
+# LEO-AI
